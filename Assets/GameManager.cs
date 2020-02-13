@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,10 +24,19 @@ public class GameManager : MonoBehaviour
     }
     #endregion
     public Player player;
+    public int level=1;
+    public SpriteRenderer[] background;
+    public Sprite[] levelSprites;
+    public UnityEvent OnBoosStart;
+    public UnityEvent OnGameOver;
+    public void Boss()
+    {
+        OnBoosStart?.Invoke();
+    }
+
     private void Awake()
     {
         _instance = this;
-        player = FindObjectOfType<Player>();
 
     }
     // Start is called before the first frame update
@@ -40,6 +52,18 @@ public class GameManager : MonoBehaviour
     }
     public void GameOver()
     {
-        Debug.Log("GameOver!");
+        OnGameOver?.Invoke();
+    }
+    public void NextLevel()
+    {
+        level++;
+        foreach (var item in background)
+        {
+            item.sprite = levelSprites[level-2];
+        }
+    }
+    public void ReloadLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

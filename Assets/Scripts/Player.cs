@@ -1,22 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour,IDamageable
 {
     
     public PlayerStats stats;
     private PlayerMovement movement;
-  
+    [SerializeField]UnityEvent OnHit;
+    [SerializeField]UnityEventInt OnLifeChange;
+    bool invincible;
     Rigidbody2D body;
 
   
     public void TakeDamage(int amount)
     {
-        Debug.Log("hp" + stats.hp);
+        if (!invincible)
+        {
         stats.hp -= amount;
         if (stats.hp <= 0) GameManager.instance.GameOver();
-        Debug.Log("hp"+stats.hp);
+            OnHit?.Invoke();
+            OnLifeChange?.Invoke(stats.hp);
+        }
+        
     }
 
     // Start is called before the first frame update
@@ -32,4 +39,8 @@ public class Player : MonoBehaviour,IDamageable
     {
         movement.HandleMovementInput();
     }
+    public void Invincible()  => invincible=true;
+    public void StopInvincible()  => invincible=false;
 }
+[System.Serializable]
+public class UnityEventInt:UnityEvent<int>{}

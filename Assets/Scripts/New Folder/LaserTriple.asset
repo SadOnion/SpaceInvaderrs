@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e07ddbbcbe28a41bf9ef04d7774647, type: 3}
+  m_Name: LaserTriple
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300002, guid: 69283cacfc65db744a3876087928fef8, type: 3}
+  price: 100
+  bought: 0
+  bullet: {fileID: 8559882729489986285, guid: 265c818c267b46e43b6e3b7a8d0f1de5, type: 3}
+  shotingHandler: {fileID: 0}
+  timeSpeed: 0.4

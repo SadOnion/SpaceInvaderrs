@@ -15,8 +15,8 @@ TagManager:
   - 
   - Enemy
   - EnemyBullet
-  - 
-  - 
+  - PlayerBullet
+  - Player
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   m_SortingLayers:
   - name: BackGround
     uniqueID: 2551638091
+    locked: 0
+  - name: Stars
+    uniqueID: 188352877
     locked: 0
   - name: Default
     uniqueID: 0

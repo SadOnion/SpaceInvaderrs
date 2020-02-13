@@ -29,6 +29,7 @@ public class MoveAndShootLazer : MonoBehaviour
         {
             isMoving = !isMoving;
             timeBtwLazer = startTime;
+            if(isMoving)AudioManager.instance.Play("Laser");
         }
         if (isMoving)
         {
@@ -43,6 +44,6 @@ public class MoveAndShootLazer : MonoBehaviour
     private void MoveAndLazer()
     {
         lazer.SetActive(true);
-        transform.position = new Vector3(Vector3.MoveTowards(transform.position, player.transform.position, speed).x, transform.position.y, 0);
+        transform.position = new Vector3(Vector3.MoveTowards(transform.position, player.transform.position, speed*Time.deltaTime).x, transform.position.y, 0);
     }
 }

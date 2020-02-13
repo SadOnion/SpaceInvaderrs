@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e07ddbbcbe28a41bf9ef04d7774647, type: 3}
+  m_Name: BaseTriple
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: ac7bea7dca6c0dd40aca597f52deb29f, type: 3}
+  price: 5
+  bought: 1
+  bullet: {fileID: 4154445035401142594, guid: d14000352b7a5e847964849599312fef, type: 3}
+  shotingHandler: {fileID: 0}
+  timeSpeed: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4830317633019502986}
   - component: {fileID: 4830317633019502989}
   - component: {fileID: 3619316496387260196}
+  - component: {fileID: 3128827043042398644}
   m_Layer: 8
   m_Name: RushingEnemy
   m_TagString: Untagged
@@ -48,10 +49,11 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 19d58f1c9374e6242ba4957202a9d46c, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -59,6 +61,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -92,7 +95,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00000011920929, y: 0.02143383}
@@ -140,8 +143,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats:
-    hp: 25
+    hp: 1
     speed: 0
+  OnDie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3578418226511952128}
+        m_MethodName: Roll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3128827043042398644}
+        m_MethodName: EmitParticle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3128827043042398644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4830317633019502991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ff36b379b212f74bba6c7e74261c1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle: {fileID: 7416228185372320935, guid: 76917cc083bd20b47b4d79a8bd94561c,
+    type: 3}
 --- !u!1 &4830317634929576321
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,6 +196,9 @@ GameObject:
   - component: {fileID: 4830317634929576447}
   - component: {fileID: 4830317634929576446}
   - component: {fileID: 9162572467807491744}
+  - component: {fileID: -3849004542931081441}
+  - component: {fileID: 284443488322627495}
+  - component: {fileID: 3578418226511952128}
   m_Layer: 8
   m_Name: RushingEnemy
   m_TagString: Untagged
@@ -170,7 +215,7 @@ Transform:
   m_GameObject: {fileID: 4830317634929576321}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.14, y: 4.81, z: -0.12426512}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 4830317633019502984}
   m_Father: {fileID: 0}
@@ -209,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5e4ca68858107c4993d64d3c6de72ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -150
+  speed: -5
 --- !u!114 &9162572467807491744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,3 +268,59 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+--- !u!114 &-3849004542931081441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4830317634929576321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aab8f0eb5b32534387720749af689c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 3
+  OnTimerEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 284443488322627495}
+        m_MethodName: DestroyNow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &284443488322627495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4830317634929576321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e14b6e4e9cd8f447931d7c87d074f47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3578418226511952128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4830317634929576321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f15741c2b72116a4d855c8220168b7ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coins:
+  - {fileID: 944720935170834266, guid: 9d51016b649950043ba2a0da31af787a, type: 3}
+  - {fileID: 890593928327126808, guid: bfdd69ceffce8874e8fc230190d285c3, type: 3}
+  - {fileID: 3947787100207924810, guid: 11e611dfeb53f794db72b9e644b6eb5e, type: 3}
+  powerUp: {fileID: 4158730758314216844, guid: 7fc98917bd9d72a429053df46ef991a6, type: 3}

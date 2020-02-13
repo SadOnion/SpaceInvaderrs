@@ -1,19 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class ShopItem : MonoBehaviour
 {
-    private void OnMouseEnter()
+    [SerializeField]TextMeshProUGUI price;
+    [SerializeField]Image icon;
+    [Space]
+    [SerializeField]Item item;
+    Player player;
+    ShotingHandler shotingHandler;
+    private void Start()
     {
-        Debug.Log("enter");
+        price.text=item.price.ToString();
+        icon.sprite = item.icon;
+        player = GameManager.instance.player;
+        shotingHandler = player.gameObject.GetComponent<ShotingHandler>();
+        item.shotingHandler=shotingHandler;
     }
-    private void OnMouseExit()
+    public void Click()
     {
-        Debug.Log("exit");
-    }
-    private void OnMouseDown()
-    {
-        Debug.Log("buy");
+        
+             if (player.stats.CanBuy(item.price))
+             {
+                player.stats.Buy(item.price);
+               
+                shotingHandler.ChangeShoot(item.ShootMethod,item.bullet,item.timeSpeed);
+             }
+        
+       
     }
 }

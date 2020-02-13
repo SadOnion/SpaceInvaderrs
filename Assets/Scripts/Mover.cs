@@ -10,7 +10,7 @@ public class Mover : MonoBehaviour
     void Awake()
     {
         body = GetComponent<Rigidbody2D>();
-        body.velocity = Vector2.up * speed;
+        body.velocity = transform.up * speed;
     }
     public void SetVelocity(Vector2 vel)
     {
