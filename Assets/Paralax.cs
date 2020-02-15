@@ -10,7 +10,7 @@ public class Paralax : MonoBehaviour
     float distance;
     int index=0;
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         distance+=Time.deltaTime*scrollSpeed;
         Vector3 posDelta =  Vector3.down*Time.deltaTime*scrollSpeed;

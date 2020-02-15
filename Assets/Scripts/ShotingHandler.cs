@@ -7,6 +7,7 @@ public class ShotingHandler : MonoBehaviour
 {
     public GameObject baseBullet;
     public float timeBtwShots=.75f;
+    private float realShotTime=0;
     public bool randomShots;
     private float time;
     public Transform[] spawnShot;
@@ -63,19 +64,19 @@ public class ShotingHandler : MonoBehaviour
     {
         StopAllCoroutines();
         if(boosted){
-            timeBtwShots*=2f;
+            timeBtwShots=realShotTime;
             boosted=false;
         }
         StartCoroutine(Boost());
-        time=0;
+        
     }
     private IEnumerator Boost()
     {
         boosted=true;
-        float temp = timeBtwShots;
+        realShotTime = timeBtwShots;
         timeBtwShots*=.5f;
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(8);
         boosted=false;
-        timeBtwShots=temp;
+        timeBtwShots=realShotTime;
     }
 }

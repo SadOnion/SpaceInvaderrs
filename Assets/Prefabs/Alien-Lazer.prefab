@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7897645786797761226}
   - component: {fileID: 66113892453348936}
   - component: {fileID: 6242614603671193445}
+  - component: {fileID: 1348068093869311257}
   m_Layer: 8
   m_Name: Alien-Lazer
   m_TagString: Untagged
@@ -125,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d24aa895f040e40ab4639f26b3f4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 2
   startTime: 2.5
   lazer: {fileID: 7897645786349864538}
 --- !u!114 &7897645786797761226
@@ -199,6 +200,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particle: {fileID: 7416228185372320935, guid: 76917cc083bd20b47b4d79a8bd94561c,
     type: 3}
+--- !u!50 &1348068093869311257
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7897645786797761231}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 2
 --- !u!1001 &6042806455769758363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -206,6 +228,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7897645786797761224}
     m_Modifications:
+    - target: {fileID: 2954656423625077145, guid: 0d9ddf58303fdc44d8081d07b5abea16,
+        type: 3}
+      propertyPath: m_LightVolumeOpacity
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954656423625077145, guid: 0d9ddf58303fdc44d8081d07b5abea16,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[3].x
+      value: 6.9071045
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954656423625077145, guid: 0d9ddf58303fdc44d8081d07b5abea16,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[3].y
+      value: 3.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954656423625077145, guid: 0d9ddf58303fdc44d8081d07b5abea16,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[2].x
+      value: 7.1591277
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954656423625077145, guid: 0d9ddf58303fdc44d8081d07b5abea16,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[2].y
+      value: 3.3482137
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954656423625077145, guid: 0d9ddf58303fdc44d8081d07b5abea16,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[1].y
+      value: -6.737424
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954656423625077145, guid: 0d9ddf58303fdc44d8081d07b5abea16,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[1].x
+      value: 7.2008986
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954656423625077145, guid: 0d9ddf58303fdc44d8081d07b5abea16,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[0].x
+      value: 6.8712144
+      objectReference: {fileID: 0}
+    - target: {fileID: 2954656423625077145, guid: 0d9ddf58303fdc44d8081d07b5abea16,
+        type: 3}
+      propertyPath: m_ShapePath.Array.data[0].y
+      value: -6.737315
+      objectReference: {fileID: 0}
     - target: {fileID: 4487360439166532801, guid: 0d9ddf58303fdc44d8081d07b5abea16,
         type: 3}
       propertyPath: m_Name

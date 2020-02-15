@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1100,7 +1100,7 @@ MonoBehaviour:
   - {fileID: 1551558256}
   - {fileID: 1197784022}
   scrollSpeed: 10
-  spriteHeight: 40.96
+  spriteHeight: 32
 --- !u!95 &185969561
 Animator:
   serializedVersion: 3
@@ -1482,7 +1482,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &380953914
 GameObject:
@@ -1554,8 +1554,8 @@ SpriteRenderer:
   m_SortingLayerID: -1743329205
   m_SortingLayer: -2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ddcac1fac1f5c8943a30c2ef6b724062, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 35313af049b4a2f42a0325330c51d74a, type: 3}
+  m_Color: {r: 0, g: 1, b: 0.1596942, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2254,13 +2254,13 @@ MonoBehaviour:
   sounds:
   - name: Enemy
     clip: {fileID: 8300000, guid: 9030b5e564b87e043b5758fe42ea7a28, type: 3}
-    volume: 0.5
+    volume: 0.4
     pitch: 0.75
     loop: 0
     source: {fileID: 0}
   - name: Player
     clip: {fileID: 8300000, guid: b56d32501ef38df4f967a3f783cda98f, type: 3}
-    volume: 0.5
+    volume: 0.4
     pitch: 2
     loop: 0
     source: {fileID: 0}
@@ -2272,13 +2272,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Warp
     clip: {fileID: 8300000, guid: c89accbcf4220d1489bb3ee97468fbab, type: 3}
-    volume: 0.5
+    volume: 0.75
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Laser
     clip: {fileID: 8300000, guid: d06790542b50acb4ea6a2872799baa5e, type: 3}
-    volume: 0.25
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -2288,6 +2288,7 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  muted: 0
 --- !u!4 &639400055
 Transform:
   m_ObjectHideFlags: 0
@@ -2300,7 +2301,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &652482556
 GameObject:
@@ -3909,8 +3910,8 @@ SpriteRenderer:
   m_SortingLayerID: -1743329205
   m_SortingLayer: -2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ddcac1fac1f5c8943a30c2ef6b724062, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 35313af049b4a2f42a0325330c51d74a, type: 3}
+  m_Color: {r: 0, g: 1, b: 0.1596942, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3958,7 +3959,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197784022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 40.96, z: 0}
+  m_LocalPosition: {x: 0, y: 32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 380953915}
@@ -4490,7 +4491,7 @@ MonoBehaviour:
   - {fileID: 1160854195}
   - {fileID: 380953916}
   levelSprites:
-  - {fileID: 21300000, guid: 35313af049b4a2f42a0325330c51d74a, type: 3}
+  - {fileID: 21300000, guid: ddcac1fac1f5c8943a30c2ef6b724062, type: 3}
   - {fileID: 21300000, guid: d9b31ebd60af68c469212c1a9f513e74, type: 3}
   OnBoosStart:
     m_PersistentCalls:
@@ -4543,7 +4544,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1516311582
 GameObject:
@@ -4774,7 +4775,7 @@ Transform:
   - {fileID: 1516311584}
   - {fileID: 671733966}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1551558256
 GameObject:
@@ -6009,7 +6010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 17524919, guid: 1bf41ee20f892f14e8336cce7dd84377, type: 3}
       propertyPath: stats.coins
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 17524919, guid: 1bf41ee20f892f14e8336cce7dd84377, type: 3}
       propertyPath: OnLifeChange.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -6030,6 +6031,10 @@ PrefabInstance:
     - target: {fileID: 17524919, guid: 1bf41ee20f892f14e8336cce7dd84377, type: 3}
       propertyPath: OnLifeChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 17524919, guid: 1bf41ee20f892f14e8336cce7dd84377, type: 3}
+      propertyPath: stats.speed
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 17524922, guid: 1bf41ee20f892f14e8336cce7dd84377, type: 3}
       propertyPath: howToAttack
@@ -6180,7 +6185,7 @@ PrefabInstance:
     - target: {fileID: 6077335013996598186, guid: 184bc5a3644fbdd4dbe2469253509998,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6077335013996598186, guid: 184bc5a3644fbdd4dbe2469253509998,
         type: 3}

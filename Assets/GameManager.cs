@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
         level++;
         foreach (var item in background)
         {
+            item.color = Color.white;
             item.sprite = levelSprites[level-2];
         }
     }

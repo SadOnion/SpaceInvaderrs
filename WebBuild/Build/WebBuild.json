@@ -1,7 +1,7 @@
 {
 "companyName": "DefaultCompany",
 "productName": "SpaceInvaders",
-"productVersion": "0.1",
+"productVersion": ".2",
 "dataUrl": "WebBuild.data.unityweb",
 "wasmCodeUrl": "WebBuild.wasm.code.unityweb",
 "wasmFrameworkUrl": "WebBuild.wasm.framework.unityweb",

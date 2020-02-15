@@ -37,6 +37,7 @@ public class MoveAndShootLazer : MonoBehaviour
         }
         else
         {
+            body.velocity=Vector2.zero;
             lazer.SetActive(false);
         }
     }
@@ -44,6 +45,17 @@ public class MoveAndShootLazer : MonoBehaviour
     private void MoveAndLazer()
     {
         lazer.SetActive(true);
-        transform.position = new Vector3(Vector3.MoveTowards(transform.position, player.transform.position, speed*Time.deltaTime).x, transform.position.y, 0);
+        if(Mathf.Abs(player.transform.position.x - transform.position.x) < 0.1f)
+        {
+            body.velocity=Vector2.zero;
+        }else if(player.transform.position.x > transform.position.x)
+        {
+            body.velocity = Vector2.right*speed;
+        }
+        else
+        {
+             body.velocity = Vector2.left*speed;
+        }
+        
     }
 }
