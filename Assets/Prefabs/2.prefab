@@ -237,11 +237,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseBullet: {fileID: 5521372229475110025, guid: d447c3f8d492aa242862f538f72ea147,
     type: 3}
-  timeBtwShots: 1
+  timeBtwShots: 1.5
+  randomRange: 0.25
   randomShots: 1
   spawnShot:
   - {fileID: 8353024386309879865}
-  player: 0
 --- !u!114 &292093084029932638
 MonoBehaviour:
   m_ObjectHideFlags: 0

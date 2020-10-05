@@ -5,12 +5,14 @@ using TMPro;
 public class CoinText : MonoBehaviour
 {
     TextMeshProUGUI text;
+    Player player;
     // Start is called before the first frame update
     void Start()
     {
         text = GetComponent<TextMeshProUGUI>();
-        UpdateText();
+        player = GameManager.instance.player;
+        player.stats.OnMoneyChange.AddListener(UpdateText);
     }
 
-    public void UpdateText() =>text.text = GameManager.instance.player.stats.coins.ToString();
+    public void UpdateText(int money) =>text.text = money.ToString();
 }

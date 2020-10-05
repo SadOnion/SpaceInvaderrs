@@ -22,7 +22,7 @@ public class Progress : MonoBehaviour
         image.fillAmount = time/timePerLevel;
         if (time >= timePerLevel)
         {
-            if(GameManager.instance.level == 3)
+            if(GameManager.instance.level % 3 == 0)
             {
                 OnBoss?.Invoke();
             }

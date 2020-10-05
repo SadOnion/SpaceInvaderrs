@@ -10,12 +10,12 @@ public class LootHandler : MonoBehaviour
     public void Roll()
     {
         int rand = Random.Range(0,100);
-        if(rand < 25)
+        if(rand < 12)
         {
-            if (rand < 10)
+            if (rand < 6)
             {
                 Instantiate(coins[0],transform.position,coins[2].transform.rotation);
-            }else if(rand< 20)
+            }else if(rand< 10)
             {
                 Instantiate(coins[1],transform.position,coins[2].transform.rotation);
             }
@@ -25,7 +25,7 @@ public class LootHandler : MonoBehaviour
             }
             
         }
-        if(rand > 90)
+        if(rand > 95)
         {
             Instantiate(powerUp,transform.position,powerUp.transform.rotation);
         }

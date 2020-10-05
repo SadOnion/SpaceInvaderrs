@@ -22,14 +22,14 @@ public class ShopItem : MonoBehaviour
     }
     public void Click()
     {
-        
+        /*
              if (player.stats.CanBuy(item.price))
              {
                 player.stats.Buy(item.price);
                
                 shotingHandler.ChangeShoot(item.ShootMethod,item.bullet,item.timeSpeed);
              }
-        
+        */
        
     }
 }

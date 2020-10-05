@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5247261323694377770}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ShotingPoint1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1515197517723443789}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ShotingPoint1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3591095734916153419}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ShotingPoint1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,9 +103,9 @@ GameObject:
   - component: {fileID: 3591095735177041360}
   - component: {fileID: 3591095735177041375}
   - component: {fileID: 17524919}
-  - component: {fileID: 17524922}
   - component: {fileID: 4537214887095890042}
-  m_Layer: 0
+  - component: {fileID: 1443793069}
+  m_Layer: 11
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,10 +242,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats:
     hp: 3
-    speed: 1200
+    speed: 7
     maxHp: 3
-    coins: 97
+    coins: 0
     dmg: 1
+    fireRate: 0.75
+    fireType: 0
   OnHit:
     m_PersistentCalls:
       m_Calls:
@@ -260,28 +262,20 @@ MonoBehaviour:
           m_StringArgument: Hit
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &17524922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3591095735177041372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e90e6243e3d250b41826271df18f65ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseBullet: {fileID: 4154445035401142594, guid: d14000352b7a5e847964849599312fef,
-    type: 3}
-  timeBtwShots: 1
-  randomShots: 0
-  spawnShot:
-  - {fileID: 3591095734916153419}
-  - {fileID: 7624441160461239674}
-  - {fileID: 5247261323694377770}
-  - {fileID: 8507388020038053863}
-  - {fileID: 1515197517723443789}
+  OnLifeChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: UpdateLifes
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &4537214887095890042
 Animator:
   serializedVersion: 3
@@ -301,6 +295,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1443793069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3591095735177041372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c2c32986418f84baedcb91678bb875, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseBullet: {fileID: 8559882729489986285, guid: 265c818c267b46e43b6e3b7a8d0f1de5,
+    type: 3}
+  spawnShot:
+  - {fileID: 3591095734916153419}
+  - {fileID: 7624441160461239674}
+  - {fileID: 5247261323694377770}
 --- !u!1 &4113481254668097824
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,7 +322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8507388020038053863}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ShotingPoint1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -340,7 +352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7624441160461239674}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ShotingPoint1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

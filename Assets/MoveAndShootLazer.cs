@@ -6,49 +6,44 @@ using UnityEngine;
 public class MoveAndShootLazer : MonoBehaviour
 { 
     public float speed=0.3f;
-    public float startTime = 2f;
+    public float laserTime = 2f;
+    public float waitTime = 2f;
     public GameObject lazer;
     Player player;
     Rigidbody2D body;
-    float timeBtwLazer;
+
     bool isMoving;
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
         player = GameManager.instance.player;
-        timeBtwLazer = startTime;
+        StartCoroutine(Wait());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator Wait()
     {
-
-        timeBtwLazer -= Time.deltaTime;
-        if (timeBtwLazer <= 0)
-        {
-            isMoving = !isMoving;
-            timeBtwLazer = startTime;
-            if(isMoving)AudioManager.instance.Play("Laser");
-        }
-        if (isMoving)
-        {
-            MoveAndLazer();
-        }
-        else
-        {
-            body.velocity=Vector2.zero;
-            lazer.SetActive(false);
-        }
+        lazer.SetActive(false);
+        body.velocity = Vector2.zero;
+        yield return new WaitForSeconds(waitTime);
+        StartCoroutine(Move());
     }
 
-    private void MoveAndLazer()
+    private IEnumerator Move()
     {
         lazer.SetActive(true);
-        if(Mathf.Abs(player.transform.position.x - transform.position.x) < 0.1f)
-        {
-            body.velocity=Vector2.zero;
-        }else if(player.transform.position.x > transform.position.x)
+        AudioManager.instance.Play("Laser");
+        StartMoving();
+        yield return new WaitForSeconds(laserTime);
+        StartCoroutine(Wait());
+    }
+
+    
+ 
+    private void StartMoving()
+    {
+       
+        if(player.transform.position.x > transform.position.x)
         {
             body.velocity = Vector2.right*speed;
         }
@@ -58,4 +53,5 @@ public class MoveAndShootLazer : MonoBehaviour
         }
         
     }
+
 }

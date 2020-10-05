@@ -9,7 +9,7 @@ public class PowerUp : MonoBehaviour
         Player p = collision.gameObject.GetComponent<Player>();
         if (p != null)
         {
-            p.gameObject.GetComponent<ShotingHandler>().PowerUp();
+            p.gameObject.GetComponent<ShootingHandlerPlayer>().PowerUp();
             Destroy(gameObject);
         }
     }

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3947787100207924852}
   - component: {fileID: 3947787100207924853}
   - component: {fileID: 3947787100207924850}
+  - component: {fileID: 3890848193798119302}
   m_Layer: 0
   m_Name: CoinG
   m_TagString: Untagged
@@ -115,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a2808951cbb9504aa21803667bb5fd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  value: 75
 --- !u!114 &3947787100207924855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,3 +190,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &3890848193798119302
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3947787100207924810}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 097002776ca66854c98933c084feaa13, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

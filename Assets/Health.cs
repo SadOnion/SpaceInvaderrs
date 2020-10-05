@@ -6,9 +6,10 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField]int maxValue;
+    public int maxValue;
     [SerializeField]Image bar;
-    private int hp;
+    public int hp {get;private set; }
+    
     private void Start()
     {
         hp = maxValue;

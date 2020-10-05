@@ -126,8 +126,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d24aa895f040e40ab4639f26b3f4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  startTime: 2.5
+  speed: 1.25
+  laserTime: 2.5
+  waitTime: 4
   lazer: {fileID: 7897645786349864538}
 --- !u!114 &7897645786797761226
 MonoBehaviour:

@@ -16,44 +16,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0027338862, y: -0.0045103654}
   m_Size: {x: 0.04429257, y: 0.24047689}
   m_Direction: 0
---- !u!114 &5081017459463809529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5521372229475110025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca81635fa210dea4cb9009ff0722e0b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  OnDamage:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8617875212716802893}
-        m_MethodName: EmitParticle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6969669479003412508}
-        m_MethodName: DestroyNow
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &8446597263696489931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -275,27 +237,3 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8446597263696489931}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6969669479003412508 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1549636309227353559, guid: d14000352b7a5e847964849599312fef,
-    type: 3}
-  m_PrefabInstance: {fileID: 8446597263696489931}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5521372229475110025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e14b6e4e9cd8f447931d7c87d074f47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8617875212716802893 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 189292665467793030, guid: d14000352b7a5e847964849599312fef,
-    type: 3}
-  m_PrefabInstance: {fileID: 8446597263696489931}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5521372229475110025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ff36b379b212f74bba6c7e74261c1a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
