@@ -16,7 +16,7 @@ public class PlayerMovement
     {
         float xAxis = Input.GetAxisRaw("Horizontal");
         body.velocity = new Vector2(xAxis*playerToMove.stats.speed, body.velocity.y);
-        body.transform.position = new Vector3(Mathf.Clamp(body.transform.position.x, -5.5f, 5.5f),body.transform.position.y,0);
+        body.transform.position = new Vector3(Mathf.Clamp(body.transform.position.x, -4.5f, 4.5f),body.transform.position.y,0);
     }
    
 }
